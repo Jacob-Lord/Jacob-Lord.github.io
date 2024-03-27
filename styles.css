@@ -6,20 +6,12 @@ body {
 
 .logo {
     border-top: 0;
-<<<<<<< HEAD
     font: 200%/1.6 georgian;
-=======
-    font: 15 palatino;
->>>>>>> 7394fd74c6541f069029aa1e49919b315ccb8c7e
     padding: 0 1em 2em;
 }
 
 .nav {
-<<<<<<< HEAD
     font: 150%/1.5 serif;
-=======
-    font: 10, serif;
->>>>>>> 7394fd74c6541f069029aa1e49919b315ccb8c7e
 }
 
 .semibold {
