@@ -57,6 +57,7 @@ header{
     a{
       padding: 20px;
       padding-bottom: 0px;
+      
     }
 }
 
@@ -64,8 +65,48 @@ header{
     font-size: x-large;
 }
 
+h3{
+  border: solid;
+  border-style: outset;
+  background-color: rgb(219, 212, 212);
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+h4 {
+    p {
+      padding: 5%;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 15%;
+      margin-right: 15%;
+      border: 1;
+      border-style: solid;
+      border-width: 1px;
+    }
+}
+
 h5 {
-    font-size: large
+    font-size: large;
+
+    p{
+      border: 1;
+      border-style: solid;
+      border-width: 1px;
+
+    }
+}
+
+h6 {
+  font-size: xx-large;
+  padding: 0;
+  margin: 0;
+  margin-right: 25%;
+  margin-left: 25%;
+  border: solid;
+  border-style: outset;
+  background-color: rgb(219, 212, 212);
+  text-align: center;
 }
 
 .projects-list {
