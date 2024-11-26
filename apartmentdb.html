@@ -1,3 +1,20 @@
+<script>
+  function loadHTML(id, file) {
+      fetch(file)
+          .then(response => {
+              if (!response.ok) throw new Error(`Could not load ${file}`);
+              return response.text();
+          })
+          .then(data => {
+              document.getElementById(id).innerHTML = data;
+          })
+          .catch(error => console.error(error));
+  }
+
+  // Load components
+  loadHTML('header', 'header.html');
+</script>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,25 +24,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">
-          <a title="Jacob Lord" href="/">Jacob Lord</a>
-        </h1>
-        <h1 class="nav">
-          <a title="Resume" href=" " target="_blank">Resume</a>
-          <a
-            title="LinkedIn"
-            href="https://www.linkedin.com/in/jacob-m-lord/"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a title="Github" href="https://github.com/Jacob-Lord" target="_blank"
-            >Github</a
-          >
-        </h1>
-      </div>
-    </header>
+
+    <div id="header"></div>
 
     <main class="content">
       <section class="projects">
@@ -34,7 +34,7 @@
           <ul class="projects-list">
             <div class="img-wrapper">
               <img
-                src="/img/thumbnail1.png"
+                src="./img/thumbnail1.png"
                 alt="Apartment Complex Database"
                 style="border: 1px solid black"
               />

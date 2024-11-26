@@ -1,85 +1,132 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jacob Lord</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <main class="Document">
-    <header>
-      <div class="header-container">
-        <h1 class="logo">
-          <a title="Jacob Lord" href="/">Jacob Lord</a>
-        </h1>
-        <h1 class="nav">
-          <a
-            title="Resume"
-            href="https://drive.google.com/file/d/1RMNuxWI639NrE4sOTLqpGZeBJRej_XHv/view?usp=sharing"
-            target="_blank"
-            >Resume</a
-          >
-          <a
-            title="LinkedIn"
-            href="https://www.linkedin.com/in/jacob-m-lord/"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a title="Github" href="https://github.com/Jacob-Lord" target="_blank"
-            >Github</a
-          >
-        </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacob Lord</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then(response => {
+          if (!response.ok) throw new Error(`Could not load ${file}`);
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    }
+
+    // Load header component
+    document.addEventListener('DOMContentLoaded', () => {
+      loadHTML('header', 'header.html');
+    });
+  </script>
+</head>
+<body>
+  <header id="header"></header>
+  <main class="content">
+    <!-- Intro Section -->
+    <section class="intro">
+      <div class="container">
+        <h1 class="semibold">About Me</h1>
+        <p>
+          I'm a student pursuing a Bachelor's in Computer Science at the
+          University of Colorado Denver. I expect to graduate in May 2026.
+          My passion for computers has been a constant since I was young,
+          and learning more about their function continues to fascinate me.
+        </p>
       </div>
-    </header>
-    <body>
-      <main class="content">
-        <section class="intro">
-          <div class="container">
-            <h1 class="semibold"><br /><br />About me</h1>
-            <h5>
-              <p>
-                I'm a student pursuing his Bachelor's in Computer Science at the
-                University Of Colorado Denver, I expect to graduate Spring of
-                2025. My passion for computers has been a constant since I was
-                young and learning more about their function continues to
-                fascinate me.
-              </p>
-            </h5>
-          </div>
-        </section>
-        <section class="projects">
-          <div class="container">
-            <h6>My Projects<br /><br /></h6>
-            <ul class="projects-list">
-              <li>
-                <a href="/webscraper.html">
-                  <div class="img-wrapper">
-                    <img
-                      src="/img/CSCI_NetworkGraph.png"
-                      alt="WebscrapingIMG"
-                    />
-                  </div>
-                  <span class="h5">Python </span>
-                  <h3>Web Scraping Exploration</h3>
-                </a>
-              </li>
-              <li>
-                <a href="/apartmentdb.html">
-                  <div class="img-wrapper">
-                    <img
-                      src="/img/thumbnail1.png"
-                      alt="Apartment Complex Database"
-                      style="border: 1px solid black"
-                    />
-                  </div>
-                  <span class="h5">SQL, phpMyAdmin </span>
-                  <h3>Apartment Complex Database</h3>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    </body>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <ul class="projects-list">
+          <li>
+            <a href="webscraper.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/CSCI_NetworkGraph.png"
+                  alt="Network graph of course list prerequisites"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">Python, Data Visualization</span>
+              <h3>Web Scraping Exploration</h3>
+            </a>
+          </li>
+          <li>
+            <a href="apartmentdb.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/thumbnail1.png"
+                  alt="Apartment Complex Database ER Diagram"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">Database Design, SQL, phpMyAdmin</span>
+              <h3>Apartment Complex Database</h3>
+            </a>
+          </li>
+          <li>
+            <a href="apartmentdb.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/SQLInject.png"
+                  alt="Injection Traffic Lab Image"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">SQL, Wireshark</span>
+              <h3>Injection Traffic Lab</h3>
+            </a>
+          </li>
+          <li>
+            <a href="apartmentdb.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/CoinFlip.png"
+                  alt="Coin Flip Image"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">Python, Probability/Statistics</span>
+              <h3>Coin Flip Simulation</h3>
+            </a>
+          </li>
+          <li>
+            <a href="apartmentdb.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/MovieCollection.png"
+                  alt="Stock image of a movie reel"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">PHP, HTML, CSS, SQL, phpMyAdmin</span>
+              <h3>Movie Collection Group Project</h3>
+            </a>
+          </li>
+          <li>
+            <a href="apartmentdb.html">
+              <div class="img-wrapper">
+                <img
+                  src="./img/RayTracerSphere.png"
+                  alt="Sphere generated by Ray Tracer"
+                  loading="lazy"
+                />
+              </div>
+              <span class="h5">Javascript, Computer Graphics</span>
+              <h3>Ray Tracer</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
+</body>
 </html>
