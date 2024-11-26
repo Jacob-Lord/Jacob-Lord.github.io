@@ -87,7 +87,7 @@ h2::after {
   background-size: 300%;
   /* Make the gradient larger than the text to allow movement */
 
-  animation: gradient-animation 5s ease-in-out infinite;
+  animation: gradient-animation 10s ease-in-out infinite;
   /* Apply the animation */
 }
 
@@ -98,9 +98,17 @@ h2::after {
     /* Start from the left */
   }
 
+  25% {
+    background-position: 50%;
+  }
+
   50% {
     background-position: 100%;
     /* Move the gradient to the right */
+  }
+
+  75% {
+    background-position: 50%;
   }
 
   100% {
