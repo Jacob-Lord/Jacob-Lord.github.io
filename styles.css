@@ -117,14 +117,6 @@ h2::after {
   }
 }
 
-h3 {
-  border: solid;
-  border-style: outset;
-  background-color: rgb(219, 212, 212);
-  margin-right: 15%;
-  margin-left: 15%;
-}
-
 h4 {
   p {
     padding: 5%;
