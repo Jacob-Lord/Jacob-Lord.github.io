@@ -237,8 +237,11 @@ a:active {
 }
 
 .projects-list h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+  border: solid;
+  border-style: outset;
+  background-color: rgb(219, 212, 212);
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 /* Responsive Design */
