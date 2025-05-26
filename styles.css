@@ -117,19 +117,6 @@ h2::after {
   }
 }
 
-h4 {
-  p {
-    padding: 5%;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 15%;
-    margin-right: 15%;
-    border: 1;
-    border-style: solid;
-    border-width: 1px;
-  }
-}
-
 h5 {
   font-size: large;
 
@@ -183,7 +170,7 @@ a:active {
   /* Adds space above and below the section */
 }
 
-.projects h2 {
+.projects h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
